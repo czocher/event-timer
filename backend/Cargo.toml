@@ -1,0 +1,31 @@
+[package]
+name = "event_timer"
+description = "A timer for events"
+version = "0.1.0"
+edition = "2021"
+publish = false
+authors = ["Pawel Jan Czochanski <pawel@czochanski.pl>"]
+
+[dependencies]
+chrono = { version = "0.4.23", features = ["serde"] }
+serde = { version = "1.0.147", features = ["derive"] }
+serde_json = "1.0.87"
+eyre = "0.6.8"
+color-eyre = "0.6.2"
+axum = { version = "0.7.1", features = ["multipart"] }
+axum-macros = "0.4.0"
+tokio = { version = "1.21.2", features = ["full"] }
+tower = "0.4.13"
+tower-http = { version = "0.5.0", features = [
+    "add-extension",
+    "trace",
+    "cors",
+] }
+clap = { version = "4.4.7", features = ["env", "derive", "string"] }
+password-auth = "1.0.0"
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
+tracing-unwrap = "0.10.0"
+typeshare = "1.0.1"
+rust-embed = { version = "8.0.0", features = ["axum-ex", "mime-guess"] }
+thiserror = "1.0.37"
